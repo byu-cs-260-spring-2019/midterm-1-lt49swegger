@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+  <link rel="stylesheet" href="./style.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+  <title>XKCD Browser</title>
+
+</head>
+
+
+
+<body>
+
+  <h1>Welcome to Bookfinder!</h1>
+
+  <div id="app">
+        
+        <div v-if="loading"> 
+            <p>Loading...</p>
+        </div>
+        <div v-else>
+                <form v-on:submit="userValue">
+                        <input type="text" id="thistext" v-model="userValue">
+                        <button @click="userValue= thistext" type="submit">Add</button>
+                </form>
+            <h1>{{current.title}}</h1>
+        </div>
+  </div>
+ 
+
+  
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+
+
+
+</html>
